@@ -11,6 +11,9 @@
 	"repository": "https://github.com/eamenab/prestashop-12-factor",
 	"logo": "https://assets.prestashop2.com/en/system/files/filedepot/15/media_1_prestashop-logotype.png",
 	"success_url": "/",
+	"scripts": {
+		"postdeploy": "composer prestashop-db-core --name='Prestashop on Heroku' --domain=cerosietecero.herokuapp.com --db_server=localhost --db_name=prestashop --db_user=admin --db_password=admin --email=admin@example.com"
+	},
 	"env": {
 		"PRESTASHOP_ADMIN_EMAIL":      { "description": "Prestashop Administrator E-Mail" },
 		"PRESTASHOP_ADMIN_USER":       { "description": "Prestashop Administrator Username", "value": "admin" },
